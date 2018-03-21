@@ -76,7 +76,7 @@ void loop()
         tempC = rht.tempC();
         
         // Publish the temperature in °C:
-
+        sprintf(tempString, "%f", tempC, 1);
         Particle.publish("Temp", tempString);
         
     }
